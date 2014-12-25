@@ -1,0 +1,417 @@
+<HTML>
+	<HEAD>
+     <style type="text/css">
+
+.TabsBorder
+{
+	border:solid 1px #798EC5;
+}
+
+.textnormal
+{
+  font-size: 11px;
+  font-weight: normal;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.textbold
+{
+  font-size: 15px;
+  font-weight: normal;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.BlueHeader 
+{
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 11px;
+ font-weight:bold;
+ color:#0090CE;
+ 
+}
+
+.TextDest 
+{color:#525252
+}
+
+.DottedLine
+{
+	background-image:url('/assets/DottedPartition.gif');
+	background-repeat:repeat-x;
+	height:7px;
+	width:98%;
+	vertical-align:middle;
+}
+
+.SpacerImage
+{
+	background:url(/assets/spacer.gif);
+	background-repeat:repeat-x; 
+	width:10%;
+	height:13px;
+}
+
+</style>
+		<title>SearchBox</title>
+        <script src="javascripts\CountryList.js"></script>
+        <script src="javascripts\DestinationList.js"></script>
+         <script src="javascripts\NationalityList.js"></script>
+        <script src="javascripts\RoomJavascript.js"></script>
+        <script src="javascripts\Date.js"></script>  
+        <script src="javascripts\CommonJS.js"></script>
+	</HEAD>
+	<body >
+		<TABLE cellSpacing="0" cellPadding="0" width="270px" border="0" ms_2d_layout="TRUE" ID="Table1" class="TabsBorder" align="left">
+			<TR vAlign="top">
+				<TD align=left width="42%">
+					<form id="FrmSearch" method="post" runat="server">
+						<TABLE cellSpacing="0" cellPadding="3" width="250px" border="0" ms_2d_layout="TRUE" ID="Table2">
+							<TR vAlign="top">
+								<TD>
+									<div>
+										<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET"> <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT">
+										<input type="hidden" name="HiddenDate" id="HiddenDate"> <input type="hidden" name="HiddenDatevalue" id="HiddenDatevalue">
+										<input type="hidden" name="lHiddenFieldRoomType" id="lHiddenFieldRoomType">
+										 <input type="hidden" id="Regionhidden" NAME="Regionhidden">
+										  <input type="hidden" id="Nighthidden" NAME="NightHidden">
+									</div>
+								</TD>
+							</TR>
+							<TR vAlign="top">
+								<TD >
+									<table border="0"  align="center" cellpadding="2" cellspacing="0" id="IndexHotelSearch"
+										width="243">
+										<tr>
+											<td width="241" ></td>
+										</tr>
+										<tr>
+											<td  valign="top">
+												<table border="0" align="center" cellpadding="2" cellspacing="0" width="99%" ID="Table3">
+													<tr>
+														<td  colspan="2" height="20" class="TextBold"><b>Accommodation Search</b></td>
+													</tr>
+													<tr>
+														<td>
+															<DIV ms_positioning="FlowLayout">
+																<TABLE height="15" class="TextNormal" cellSpacing="0" cellPadding="0" width="70" border="0" ms_1d_layout="TRUE"
+																	ID="Table4">
+																	<TR>
+																		<TD >Country</TD>
+																	</TR>
+																</TABLE>
+															</DIV>
+														<td>
+															<SELECT id="CountryDropDown" onchange="GetCity()"  style="width:175px;" class="TextNormal"
+																NAME="CountryDropDown">
+																<OPTION selected></OPTION>
+															</SELECT></td>
+													</tr>
+													<tr>
+														<td><DIV ms_positioning="FlowLayout">
+																<TABLE height="15" class="TextNormal" cellSpacing="0" cellPadding="0" width="70" border="0" ms_1d_layout="TRUE"
+																	ID="Table5">
+																	<TR>
+																		<TD>Destination</TD>
+																	</TR>
+																</TABLE>
+															</DIV>
+														</td>
+														<td><SELECT id="CityDropDown" onchange="GetDistrict()"  style="width:175px;" class="TextNormal"
+																NAME="CityDropDown">
+																<OPTION selected></OPTION>
+															</SELECT></td>
+													</tr>
+
+													<tr>
+														<td  colspan="4"></td>
+													</tr>
+													<tr>
+														<td><DIV ms_positioning="FlowLayout">
+																<TABLE height="15" class="TextNormal" cellSpacing="0" cellPadding="0" width="70" border="0" ms_1d_layout="TRUE"
+																	ID="Table8">
+																	<TR>
+																		<TD>Check In</TD>
+																	</TR>
+																</TABLE>
+															</DIV>
+														</td>
+														<td class="TextNormal"><select name="CheckInDateControl1:SelectDD" id="CheckInDateControl1_SelectDD" class="TextNormal"
+																onchange="DateDifferenceForCheckInOption('CheckInDateControl1_SelectDD', 'CheckInDateControl1_SelectMM', 'CheckInDateControl1_SelectYY', 'NoOfNightsControl1_SelectNN', 'CustomerPageLayout_DisplayDateControl1')">
+															</select>
+															<select name="CheckInDateControl1:SelectMM" id="CheckInDateControl1_SelectMM" class="TextNormal"
+																onchange="DateDifferenceForCheckInOption('CheckInDateControl1_SelectDD', 'CheckInDateControl1_SelectMM', 'CheckInDateControl1_SelectYY', 'NoOfNightsControl1_SelectNN', 'CustomerPageLayout_DisplayDateControl1')">
+															</select>
+															<select name="CheckInDateControl1:SelectYY" id="CheckInDateControl1_SelectYY" class="TextNormal"
+																onchange="DateDifferenceForCheckInOption('CheckInDateControl1_SelectDD', 'CheckInDateControl1_SelectMM','CheckInDateControl1_SelectYY', 'NoOfNightsControl1_SelectNN', 'CustomerPageLayout_DisplayDateControl1')">
+															</select></td>
+													</tr>
+													<tr>
+														<td>
+															<span id="CustomerPageLayout_DisplayTextControl7" class="TextNormal">Night(s)</span>
+														</td>
+														<td>
+															<div id="Level3">
+																<select name="NoOfNightsControl1:SelectNN" class="TextNormal" id="NoOfNightsControl1_SelectNN" class="TextNormal"
+																	onchange="DateDifferenceForCheckInOption('CheckInDateControl1_SelectDD', 'CheckInDateControl1_SelectMM','CheckInDateControl1_SelectYY', 'NoOfNightsControl1_SelectNN', 'CustomerPageLayout_DisplayDateControl1')">
+																	<option value="1" selected>1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																	<option value="4">4</option>
+																	<option value="5">5</option>
+																	<option value="6">6</option>
+																	<option value="7">7</option>
+																	<option value="8">8</option>
+																	<option value="9">9</option>
+																	<option value="10">10</option>
+																	<option value="11">11</option>
+																	<option value="12">12</option>
+																	<option value="13">13</option>
+																	<option value="14">14</option>
+																	<option value="More">More</option>
+																</select>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<DIV ms_positioning="FlowLayout">
+																<TABLE height="15" class="TextNormal" cellSpacing="0" cellPadding="0" width="70" border="0" ms_1d_layout="TRUE"
+																	ID="Table9">
+																	<TR>
+																		<TD>Check Out</TD>
+																	</TR>
+																</TABLE>
+															</DIV>
+														</td>
+														<td>
+															<span id="CustomerPageLayout_DisplayDateControl1" class="TextNormal"></span>
+														</td>
+													</tr>
+													<tr>
+														<td  colspan="4"></td>
+													</tr>
+													<tr>
+														<td width="50%" class="TextNormal">
+															<span>Guest Nationality</span>
+														</td>
+														<td colspan="2">
+															<select name="CustomerPageLayout:CountryCodesDropdown1:CountryCodes" id="CustomerPageLayout_CountryCodesDropdown1_CountryCodes"
+																class="TextNormal" style="width:169px;">
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<td  colspan="4"></td>
+													</tr>
+													<tr>
+														<td><DIV ms_positioning="FlowLayout">
+																<TABLE height="15" class="TextNormal" cellSpacing="0" cellPadding="0" width="70" border="0" ms_1d_layout="TRUE"
+																	ID="Table7">
+																	<TR>
+																		<TD>Star</TD>
+																	</TR>
+																</TABLE>
+															</DIV>
+														</td>
+														<td>
+															<select name="StarRating1" id="StarRating" class="TextNormal">
+																<option value="0">Show All</option>
+																<option value="1">1 star and higher</option>
+																<option value="2">2 star and higher</option>
+																<option value="3">3 star and higher</option>
+																<option value="4">4 star and higher</option>
+																<option value="5">5 star and higher</option>
+															</select>
+														</td>
+													</tr>
+																									<tr>
+														<td class="DottedLine" colspan="4"></td>
+													</tr>
+												</table>
+												<div id="RoomControl"al">
+													<table cellpadding="2" cellspacing="1" border="0" ID="Table11">
+														<tr>
+															<td>
+																<nobr>
+																	<span id="RoomHeader">
+																		<span id="CustomerPageLayout_RoomHeaderLabel" class="TextNormal">Room(s)</span>
+																	</span></nobr>
+															</td>
+															<td></td>
+															<td>
+																<span id="AdultsHeader">
+																	<span class="TextNormal">Adults</span>
+																</span>
+															</td>
+															<td>
+																<span id="ChildHeader">
+																	<span id="CustomerPageLayout_DisplayTextControl2" class="TextNormal">Children</span>
+																</span>
+															</td>
+															<td colspan="2">
+															<span id="ChildAgeHeader">
+																<span id="CustomerPageLayout_Displaytextcontrol3" class="TextNormal"><nobr>Child Age</nobr></span>
+															</span>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<select name="CustomerPageLayout:RoomDropDown" id="CustomerPageLayout_RoomDropDown" class="TextNormal">
+																	<option value="1" selected>1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																</select>
+															</td>
+															<td>
+																<div id="CustomerPageLayout_RoomLabel11"><span id="CustomerPageLayout_Displaytextcontrol14" class="TextNormal"><nobr>1</nobr></span></div>
+															</td>
+															<td>
+																<select name="CustomerPageLayout:AdultsDropDown1" id="CustomerPageLayout_AdultsDropDown1"
+																	class="TextNormal">
+																	<option value="1" selected>1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																	<option value="4">4</option>
+																</select>
+															</td>
+															<td>
+															<select name="CustomerPageLayout:ChildDropDown1" id="CustomerPageLayout_ChildDropDown1"
+																class="TextNormal">
+																<option selected value="0">0</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+														</td>
+														<td >
+															<select name="CustomerPageLayout:ChildAgedown11" id="CustomerPageLayout_ChildAgedown11"
+																class="TextNormal">
+															</select>
+														</td>
+														<td>
+															<select name="CustomerPageLayout:ChildAgedown12" id="CustomerPageLayout_ChildAgedown12"
+																class="TextNormal">
+															</select>
+														</td>
+														</tr>
+														<tr>
+															<td>
+															</td>
+															<td>
+																<div id="CustomerPageLayout_RoomLabel21"><span id="CustomerPageLayout_Displaytextcontrol13" class="TextNormal"><nobr>2</nobr></span></div>
+															</td>
+															<td>
+																<select name="CustomerPageLayout:AdultsDropDown2" id="CustomerPageLayout_AdultsDropDown2"
+																	class="TextNormal">
+																	<option value="1" selected>1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																	<option value="4">4</option>
+																</select>
+															</td>
+															<td>
+																<select name="CustomerPageLayout:ChildDropDown2" id="CustomerPageLayout_ChildDropDown2"
+																	class="TextNormal">
+																	<option selected value="0">0</option>
+																	<option value="1">1</option>
+																	<option value="2">2</option>
+																</select>
+															</td>
+															<td>
+																<select name="CustomerPageLayout:ChildAgedown21" id="CustomerPageLayout_ChildAgedown21"
+																	class="TextNormal">
+																</select>
+															</td>
+															<td>
+																<select name="CustomerPageLayout:ChildAgedown22" id="CustomerPageLayout_ChildAgedown22"
+																	class="TextNormal">
+																</select>
+															</td> 
+														</tr>
+														<tr>
+															<td>
+															</td>
+															<td>
+																<div id="CustomerPageLayout_RoomLabel31"><span class="TextNormal"><nobr>3</nobr></span></div>
+															</td>
+															<td>
+																<select name="CustomerPageLayout:AdultsDropDown3" id="CustomerPageLayout_AdultsDropDown3"
+																	class="TextNormal">
+																	<option value="1" selected>1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																	<option value="4">4</option>
+																</select>
+															</td>
+															<td>
+																<select name="CustomerPageLayout:ChildDropDown3" id="CustomerPageLayout_ChildDropDown3"
+																	class="TextNormal">
+																	<option selected value="0">0</option>
+																	<option value="1">1</option>
+																	<option value="2">2</option>
+																</select>
+															</td>
+															<td>
+																<select name="CustomerPageLayout:ChildAgedown31" id="CustomerPageLayout_ChildAgedown31"
+																	class="TextNormal">
+																</select>
+															</td>
+															<td>
+																<select name="CustomerPageLayout:ChildAgedown32" id="CustomerPageLayout_ChildAgedown32"
+																	class="TextNormal">
+																</select>
+															</td>															
+														</tr>														
+													</table>
+												</div>
+												<table width="98%" cellpadding="2" cellspacing="0" align="center" ID="Table13">
+													<tr>
+														<td align="right">
+															 
+															<a href="#" onclick="chk();"><img src="/assets/Search.gif" border="0"></a>
+														</td>
+													</tr>
+													<script language="javascript">
+			                                     		ltemp = document.getElementById("RoomControl");
+			                                     		
+					                                    if(ltemp)
+					                                    {
+					                                    RoomStart(
+					                                    'CustomerPageLayout_RoomDropDown', 
+					                                    3, 
+					                                    'CustomerPageLayout_RoomLabel', 
+					                                    'CustomerPageLayout_AdultsDropDown', 
+					                                    'CustomerPageLayout_ChildDropDown', 
+					                                    'CustomerPageLayout_ChildAgedown', 
+					                                    2, 
+					                                    null, 
+					                                    null, 
+					                                    false,
+					                                    2);		   
+					                                    }
+													</script>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td class="IndexHotelSearchBottom"></td>
+										</tr>
+									</table>
+								</TD>
+							</TR>
+						</TABLE>
+
+					</form>
+				</TD>
+				
+		         </TR>
+		         </TABLE>
+		    <input type="hidden" id="hidPartnerId" name="NightHidden" value="174"/>
+	</body>
+	<script type="text/javascript">
+	  GetDates();
+	  GetMonth();
+	  GetChildAge();
+	  GetCountry();
+	  GetNationality();
+	</script> 
+</HTML>
