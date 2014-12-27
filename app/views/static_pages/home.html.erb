@@ -1,67 +1,9 @@
 <HTML>
 	<HEAD>
-     <style type="text/css">
-
-.TabsBorder
-{
-	border:solid 1px #798EC5;
-}
-
-.textnormal
-{
-  font-size: 11px;
-  font-weight: normal;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-
-.textbold
-{
-  font-size: 15px;
-  font-weight: normal;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-
-.BlueHeader 
-{
- font-family: Verdana, Arial, Helvetica, sans-serif;
- font-size: 11px;
- font-weight:bold;
- color:#0090CE;
- 
-}
-
-.TextDest 
-{color:#525252
-}
-
-.DottedLine
-{
-	background-image:url('/assets/DottedPartition.gif');
-	background-repeat:repeat-x;
-	height:7px;
-	width:98%;
-	vertical-align:middle;
-}
-
-.SpacerImage
-{
-	background:url(/assets/spacer.gif);
-	background-repeat:repeat-x; 
-	width:10%;
-	height:13px;
-}
-
-</style>
-		<title>SearchBox</title>
-        <script src="javascripts\CountryList.js"></script>
-        <script src="javascripts\DestinationList.js"></script>
-         <script src="javascripts\NationalityList.js"></script>
-        <script src="javascripts\RoomJavascript.js"></script>
-        <script src="javascripts\Date.js"></script>  
-        <script src="javascripts\CommonJS.js"></script>
+		<title>Book it Easy</title>
 	</HEAD>
 	<body >
-		<TABLE cellSpacing="0" cellPadding="0" width="270px" border="0" ms_2d_layout="TRUE" ID="Table1" class="TabsBorder" align="left">
+		<TABLE cellSpacing="0" cellPadding="0" width="270px" border="0" ms_2d_layout="TRUE" ID="Table1" class="TabsBorder" align="center"  margin-left="auto" margin-right="auto">
 			<TR vAlign="top">
 				<TD align=left width="42%">
 					<form id="FrmSearch" method="post" runat="server">
@@ -104,7 +46,8 @@
 															<SELECT id="CountryDropDown" onchange="GetCity()"  style="width:175px;" class="TextNormal"
 																NAME="CountryDropDown">
 																<OPTION selected></OPTION>
-															</SELECT></td>
+															</SELECT>
+														</td>
 													</tr>
 													<tr>
 														<td><DIV ms_positioning="FlowLayout">
@@ -366,8 +309,9 @@
 												<table width="98%" cellpadding="2" cellspacing="0" align="center" ID="Table13">
 													<tr>
 														<td align="right">
-															 
-															<a href="#" onclick="chk();"><img src="/assets/Search.gif" border="0"></a>
+															<button onclick="chk();" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+  																Search
+															</button>
 														</td>
 													</tr>
 													<script language="javascript">

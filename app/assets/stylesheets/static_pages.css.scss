@@ -4,3 +4,58 @@
 body {
 	background-image: url(/assets/bookItEasyBackGround.jpg);
 }
+
+.TabsBorder
+{
+	border:solid 1px #798EC5;
+}
+
+.textnormal
+{
+  font-size: 11px;
+  font-weight: normal;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-color: #FF7F50
+}
+
+.textbold
+{
+  font-size: 15px;
+  font-weight: normal;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.BlueHeader 
+{
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 11px;
+ font-weight:bold;
+ color:#FF7F50;
+ 
+}
+
+.TextDest 
+{
+	color:#FF7F50
+}
+
+.DottedLine
+{
+	background-image:url('/assets/DottedPartition.gif');
+	background-repeat:repeat-x;
+	height:7px;
+	width:98%;
+	vertical-align:middle;
+}
+
+.SpacerImage
+{
+	background:url(/assets/spacer.gif);
+	background-repeat:repeat-x; 
+	width:10%;
+	height:13px;
+}
+
+html, body {
+    width: 100%;
+}
