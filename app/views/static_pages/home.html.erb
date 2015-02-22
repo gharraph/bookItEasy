@@ -17,7 +17,7 @@
 					<input type="hidden" id="Nighthidden" NAME="NightHidden">
 				</div>
 
-				<div id="frameTopDiv">
+				<div id="frame-title">
 					<label id="frameTopLabel">
 						Accommodation Search
 					</label>	
@@ -94,7 +94,7 @@
 
 				<div class="form-group frameLine">
 					<label for="CustomerPageLayout_DisplayDateControl1" class="control-label col-xs-4">Check Out</label>
-					<span id="CustomerPageLayout_DisplayDateControl1" class="TextNormal"></span>
+					<label id="CustomerPageLayout_DisplayDateControl1" class="checkout-label control-label"></label>
 				</div>
 
 				<div class="form-group frameLine">
@@ -122,9 +122,9 @@
 					</div>
 				</div>
 
-				<hr>
+				<hr class="line-separator">
 
-				<div class="form-group frameLine">
+				<div class="form-group frameLine"  id="RoomControl">
 					<span id="RoomHeader">
 						<label id="CustomerPageLayout_RoomHeaderLabel"  class="control-label col-xs-3">Room(s)</label>
 					</span>
@@ -134,111 +134,111 @@
 					<span id="ChildHeader">
 						<label id="CustomerPageLayout_DisplayTextControl2" class="control-label col-xs-3">Children</label>
 					</span>
-					<span id="ChildHeader">
+					<span id="ChildAgeHeader">
 						<label id="CustomerPageLayout_Displaytextcontrol3" class="control-label col-xs-3">Child Age</label>
 					</span>
 				</div>
 
 				<div class="form-group frameLine">
-					<div class="col-xs-2">
-						<select name="CustomerPageLayout:RoomDropDown" id="CustomerPageLayout_RoomDropDown" class="TextNormal form-control">
+					<div class="col-xs-2 room-select">
+						<select name="CustomerPageLayout:RoomDropDown" id="CustomerPageLayout_RoomDropDown" class="form-control">
 							<option value="1" selected>1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
 						</select>
 					</div>
 					<div id="CustomerPageLayout_RoomLabel11">
-						<span id="CustomerPageLayout_Displaytextcontrol14" class="TextNormal">
+						<span id="CustomerPageLayout_Displaytextcontrol14">
 							<label class="control-label col-xs-1">1</label>
 						</span>
 					</div>
-					<div class="col-xs-2">
-						<select name="CustomerPageLayout:AdultsDropDown1" id="CustomerPageLayout_AdultsDropDown1" class="TextNormal form-control">
+					<div class="col-xs-2 adults-select">
+						<select name="CustomerPageLayout:AdultsDropDown1" id="CustomerPageLayout_AdultsDropDown1" class="form-control">
 							<option value="1" selected>1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
 						</select>
 					</div>
-					<div class="col-xs-2">
-						<select name="CustomerPageLayout:ChildDropDown1" id="CustomerPageLayout_ChildDropDown1" class="TextNormal form-control">
+					<div class="col-xs-2 children-select">
+						<select name="CustomerPageLayout:ChildDropDown1" id="CustomerPageLayout_ChildDropDown1" class="form-control">
 							<option selected value="0">0</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
 						</select>
 					</div>
-					<div class="col-xs-2">
-						<select name="CustomerPageLayout:ChildAgedown11" id="CustomerPageLayout_ChildAgedown11" class="TextNormal form-control">
+					<div class="col-xs-2 child1-age-select">
+						<select name="CustomerPageLayout:ChildAgedown11" id="CustomerPageLayout_ChildAgedown11" class="form-control">
 						</select>
 					</div>
-					<div class="col-xs-2">
-						<select name="CustomerPageLayout:ChildAgedown12" id="CustomerPageLayout_ChildAgedown12" class="TextNormal form-control">
+					<div class="col-xs-2 child2-age-select">
+						<select name="CustomerPageLayout:ChildAgedown12" id="CustomerPageLayout_ChildAgedown12" class="form-control">
 						</select>
 					</div>
 				</div>
 
 				<div class="form-group frameLine">
-					<span class="col-xs-2">
+					<span class="col-xs-2 room-select">
 					</span>
 				  <div id="CustomerPageLayout_RoomLabel21">
-						<span id="CustomerPageLayout_Displaytextcontrol13" class="TextNormal">
+						<span id="CustomerPageLayout_Displaytextcontrol13">
 							<label class="control-label col-xs-1">2</label>
 						</span>
 					</div>
-					<div class="col-xs-2">
-						<select name="CustomerPageLayout:AdultsDropDown2" id="CustomerPageLayout_AdultsDropDown2" class="TextNormal form-control">
+					<div class="col-xs-2 adults-select">
+						<select name="CustomerPageLayout:AdultsDropDown2" id="CustomerPageLayout_AdultsDropDown2" class="form-control">
 							<option value="1" selected>1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
 						</select>
 					</div>
-					<div class="col-xs-2">
-						<select name="CustomerPageLayout:ChildDropDown2" id="CustomerPageLayout_ChildDropDown2" class="TextNormal form-control">
+					<div class="col-xs-2 children-select">
+						<select name="CustomerPageLayout:ChildDropDown2" id="CustomerPageLayout_ChildDropDown2" class="form-control">
 							<option selected value="0">0</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
 						</select>
 					</div>
-					<div class="col-xs-2">
-						<select name="CustomerPageLayout:ChildAgedown21" id="CustomerPageLayout_ChildAgedown21" class="TextNormal form-control">
+					<div class="col-xs-2 child1-age-select">
+						<select name="CustomerPageLayout:ChildAgedown21" id="CustomerPageLayout_ChildAgedown21" class="form-control">
 						</select>
 					</div>
-					<div class="col-xs-2">
-						<select name="CustomerPageLayout:ChildAgedown22" id="CustomerPageLayout_ChildAgedown22" class="TextNormal form-control">
+					<div class="col-xs-2 child2-age-select">
+						<select name="CustomerPageLayout:ChildAgedown22" id="CustomerPageLayout_ChildAgedown22" class="form-control">
 						</select>
 					</div>
 				</div>
 
 				<div class="form-group frameLine">
-					<span class="col-xs-2">
+					<span class="col-xs-2 room-select">
 					</span>
 				  <div id="CustomerPageLayout_RoomLabel31">
-						<span class="TextNormal">
+						<span>
 							<label class="control-label col-xs-1">3</label>
 						</span>
 					</div>
-					<div class="col-xs-2">
-						<select name="CustomerPageLayout:AdultsDropDown3" id="CustomerPageLayout_AdultsDropDown3" class="TextNormal form-control">
+					<div class="col-xs-2 adults-select">
+						<select name="CustomerPageLayout:AdultsDropDown3" id="CustomerPageLayout_AdultsDropDown3" class="form-control">
 							<option value="1" selected>1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
 						</select>
 					</div>
-					<div class="col-xs-2">
-						<select name="CustomerPageLayout:ChildDropDown3" id="CustomerPageLayout_ChildDropDown3" class="TextNormal form-control">
+					<div class="col-xs-2 children-select">
+						<select name="CustomerPageLayout:ChildDropDown3" id="CustomerPageLayout_ChildDropDown3" class="form-control">
 							<option selected value="0">0</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
 						</select>
 					</div>
-					<div class="col-xs-2">
-						<select name="CustomerPageLayout:ChildAgedown31" id="CustomerPageLayout_ChildAgedown31" class="TextNormal form-control">
+					<div class="col-xs-2 child1-age-select">
+						<select name="CustomerPageLayout:ChildAgedown31" id="CustomerPageLayout_ChildAgedown31" class="form-control">
 						</select>
 					</div>
-					<div class="col-xs-2">
-						<select name="CustomerPageLayout:ChildAgedown32" id="CustomerPageLayout_ChildAgedown32" class="TextNormal form-control">
+					<div class="col-xs-2 child2-age-select">
+						<select name="CustomerPageLayout:ChildAgedown32" id="CustomerPageLayout_ChildAgedown32" class="form-control">
 						</select>
 					</div>
 				</div>

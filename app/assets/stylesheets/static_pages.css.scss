@@ -10,12 +10,8 @@ body {
 	border:solid 1px #798EC5;
 }
 
-.textnormal
-{
-  font-size: 11px;
-  font-weight: normal;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-color: #FF7F50
+.checkout-label {
+  margin-left: 20px;
 }
 
 .textbold
@@ -58,19 +54,46 @@ body {
 
 .select
 {
-  width: 220px;
+  width: 300px;
 }
 
 div#outerFrame 
 {
+   width: 450px;
    position: fixed;
    top: 10%;
    left: 10%;	
 }
 
+div#frame-title {
+  margin-left: 30px;
+}
+
 .button
 {
   float: right;
+}
+
+.room-select {
+  margin-left: 30px;
+}
+
+.adults-select {
+  margin-left: 15px;
+}
+
+.children-select {
+  margin-left: 25px;
+}
+
+.child1-age-select {
+  margin-left: 10px;
+}
+
+.child2-age-select {
+}
+.line-separator {
+  margin-left: 30px;
 }
 
 html, body {
