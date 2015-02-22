@@ -493,7 +493,7 @@ function GetDates()
 		sortcountryArray[i][1]=StayDateArray[i][1];
 	}
 	sortcountryArray.sort();
-	for(var i=0;i<lObj.length ;i++)
+	for(var i=0;i<lObj.length -1  ;i++)
 	{  
 		lObj.options[i].value=sortcountryArray[i][1];
 		lObj.options[i].text=sortcountryArray[i][0];
@@ -521,7 +521,7 @@ function GetMonth()
 		sortcountryArray[i][1]=lArrMonth[i][1];
 	}
 
-	for(var i=0;i<lObj.length ;i++)
+	for(var i=0;i<lObj.length -1 ;i++)
 	{  
 		lObj.options[i].value=sortcountryArray[i][1];
 		lObj.options[i].text=sortcountryArray[i][0];
