@@ -56,6 +56,23 @@ body {
 	height:13px;
 }
 
+.select
+{
+  width: 220px;
+}
+
+div#outerFrame 
+{
+   position: fixed;
+   top: 10%;
+   left: 10%;	
+}
+
+.button
+{
+  float: right;
+}
+
 html, body {
     width: 100%;
 }
