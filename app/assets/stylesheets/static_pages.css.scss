@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-	background-image: url(/assets/bookItEasyBackGround.jpg);
+	background-image: url(/assets/oldTown.jpg);
 }
 
 .TabsBorder
@@ -14,42 +14,9 @@ body {
   margin-left: 20px;
 }
 
-.textbold
-{
-  font-size: 15px;
-  font-weight: normal;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-
-.BlueHeader 
-{
- font-family: Verdana, Arial, Helvetica, sans-serif;
- font-size: 11px;
- font-weight:bold;
- color:#FF7F50;
- 
-}
-
 .TextDest 
 {
 	color:#FF7F50
-}
-
-.DottedLine
-{
-	background-image:url('/assets/DottedPartition.gif');
-	background-repeat:repeat-x;
-	height:7px;
-	width:98%;
-	vertical-align:middle;
-}
-
-.SpacerImage
-{
-	background:url(/assets/spacer.gif);
-	background-repeat:repeat-x; 
-	width:10%;
-	height:13px;
 }
 
 .select
